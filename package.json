@@ -1,62 +1,28 @@
 {
-  
+  "homepage": " http://sjd-bsbri.github.io/quiz-app-NEXT",
   "name": "my-quiz",
-  
   "version": "0.1.0",
-  
   "private": true,
-  
   "scripts": {
-  
-    
-  "dev": "next dev",
-  
-    
-  "build": "next build",
-  
-    
-  "start": "next start",
-  
-    
-  "lint": "next lint"
-  
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  
   "dependencies": {
-  
-    
-  "next": "14.2.5",
-  
-    
-  "next-auth": "^4.24.5",
-  
-    
-  "react": "^18",
-  
-    
-  "react-dom": "^18",
-  
-    
-  "react-loading-skeleton": "^3.3.1",
-  
-    
-  "sharp": "^0.33.5"
-  
+    "next": "14.2.5",
+    "next-auth": "^4.24.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-loading-skeleton": "^3.3.1",
+    "sharp": "^0.33.5"
   },
-  
   "devDependencies": {
-  
-    
-  "autoprefixer": "^10.4.20",
-  
-    
-  "gh-pages": "^6.1.1",
-  
-    
-  "postcss": "^8.4.41",
-  
-    
-  "tailwindcss": "^3.4.10"
-  
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10"
   }
 }

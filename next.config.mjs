@@ -1,13 +1,5 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {};
-
-// export default nextConfig;
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/quiz-app-NEXT",
-  // output: "export",
-  reactStrictMode: true,
-};
+const nextConfig = {};
 
-module.exports = nextConfig;
+export default nextConfig;
+
