@@ -6,7 +6,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: "/quiz-app-NEXT",
-  output: "export",
+  // output: "export",
   reactStrictMode: true,
 };
 
