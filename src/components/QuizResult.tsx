@@ -1,0 +1,164 @@
+'use client';
+
+import { QuizResult as QuizResultType } from '@/types/quiz';
+import { formatTimeSpent, getScoreColor, getScoreMessage } from '@/utils/helpers';
+
+interface QuizResultProps {
+  result: QuizResultType;
+  onRestart: () => void;
+}
+
+export default function QuizResult({ result, onRestart }: QuizResultProps) {
+  const scorePercentage = (result.score / 100) * 360; // For circular progress
+
+  return (
+    <div className="w-full max-w-2xl mx-auto animate-slide-up">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <div className="text-6xl mb-4">🎯</div>
+        <h1 className="text-3xl font-bold text-white mb-2 font-vazirmatn">
+          نتیجه آزمون
+        </h1>
+        <p className="text-gray-400 font-vazirmatn">
+          آزمون {result.categoryName}
+        </p>
+      </div>
+
+      {/* Score Circle */}
+      <div className="flex justify-center mb-8">
+        <div className="relative w-48 h-48">
+          {/* Background Circle */}
+          <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              stroke="rgb(55 65 81)"
+              strokeWidth="8"
+              fill="none"
+              className="opacity-30"
+            />
+            {/* Progress Circle */}
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              stroke="url(#scoreGradient)"
+              strokeWidth="8"
+              fill="none"
+              strokeDasharray={`${scorePercentage * 0.785} 283`}
+              strokeLinecap="round"
+              className="transition-all duration-1000 ease-out"
+              style={{
+                animation: 'drawCircle 2s ease-out'
+              }}
+            />
+            <defs>
+              <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#3b82f6" />
+                <stop offset="100%" stopColor="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          {/* Score Text */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <div className={`text-4xl font-bold ${getScoreColor(result.score)}`}>
+                {result.score}%
+              </div>
+              <div className="text-sm text-gray-400 font-vazirmatn">
+                نمره نهایی
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Score Message */}
+      <div className="text-center mb-8">
+        <div className={`text-2xl font-bold mb-2 font-vazirmatn ${getScoreColor(result.score)}`}>
+          {getScoreMessage(result.score)}
+        </div>
+      </div>
+
+      {/* Statistics */}
+      <div className="grid grid-cols-2 gap-4 mb-8">
+        <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 text-center">
+          <div className="text-3xl mb-2">✅</div>
+          <div className="text-2xl font-bold text-green-400 mb-1">
+            {result.correctAnswers}
+          </div>
+          <div className="text-sm text-gray-400 font-vazirmatn">
+            پاسخ صحیح
+          </div>
+        </div>
+
+        <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 text-center">
+          <div className="text-3xl mb-2">❌</div>
+          <div className="text-2xl font-bold text-red-400 mb-1">
+            {result.wrongAnswers}
+          </div>
+          <div className="text-sm text-gray-400 font-vazirmatn">
+            پاسخ غلط
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Info */}
+      <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 mb-8">
+        <div className="grid grid-cols-2 gap-4 text-center">
+          <div>
+            <div className="text-lg font-bold text-blue-400 mb-1">
+              {result.totalQuestions}
+            </div>
+            <div className="text-sm text-gray-400 font-vazirmatn">
+              کل سوالات
+            </div>
+          </div>
+          <div>
+            <div className="text-lg font-bold text-purple-400 mb-1">
+              {formatTimeSpent(result.timeSpent)}
+            </div>
+            <div className="text-sm text-gray-400 font-vazirmatn">
+              زمان صرف شده
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Completion Date */}
+      <div className="text-center mb-8">
+        <div className="text-sm text-gray-400 font-vazirmatn">
+          تاریخ تکمیل: {result.completedAt.toLocaleDateString('fa-IR')} - {result.completedAt.toLocaleTimeString('fa-IR')}
+        </div>
+      </div>
+
+      {/* Action Button */}
+      <div className="text-center">
+        <button
+          onClick={onRestart}
+          className="
+            px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 
+            text-white font-bold rounded-xl font-vazirmatn
+            transform transition-all duration-300 hover:scale-105 hover:shadow-lg
+            border border-white/10 backdrop-blur-sm
+          "
+        >
+          آزمون جدید 🚀
+        </button>
+      </div>
+
+      <style jsx>{`
+        @keyframes drawCircle {
+          from {
+            stroke-dasharray: 0 283;
+          }
+          to {
+            stroke-dasharray: ${scorePercentage * 0.785} 283;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
