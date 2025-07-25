@@ -68,7 +68,67 @@ export const quizCategories: Category[] = [
         question: 'کدام گزینه منطق جمله را کامل می‌کند؟ همه پرندگان بال دارند، کبوتر پرنده است، پس...',
         options: ['کبوتر پرواز می‌کند', 'کبوتر بال دارد', 'کبوتر حیوان است', 'کبوتر زیبا است'],
         correctAnswer: 1
-      }
+      },
+      {
+        id: 'int-11',
+        question: 'چه عددی در دنباله 3, 5, 8, 13, 21, ? قرار می‌گیرد؟',
+        options: ['34', '30', '32', '28'],
+        correctAnswer: 0
+        },
+        {
+        id: 'int-12',
+        question: 'کدام یک از موارد زیر با بقیه فرق دارد: سیب، موز، گل رز، پرتقال؟',
+        options: ['سیب', 'موز', 'گل رز', 'پرتقال'],
+        correctAnswer: 2
+        },
+        {
+        id: 'int-13',
+        question: 'اگر حروف "CIFAIPC" را دوباره مرتب کنید، نام کدام یک را خواهید داشت:',
+        options: ['شهر', 'اقیانوس', 'حیوان', 'کشور'],
+        correctAnswer: 1
+        },
+        {
+        id: 'int-14',
+        question: 'پزشک به شما 3 قرص می دهد و به شما می گوید که هر نیم ساعت یک قرص بخورید. مصرف تمام قرص ها چقدر طول می کشد؟',
+        options: ['1.5 ساعت', '1 ساعت', '2 ساعت', '30 دقیقه'],
+        correctAnswer: 1
+        },
+        {
+        id: 'int-15',
+        question: 'یک کشاورز 17 گوسفند داشت و همه جز 9 تا مردند. چندتا باقی مانده است؟',
+        options: ['8', '9', '17', '26'],
+        correctAnswer: 1
+        },
+        {
+        id: 'int-16',
+        question: 'کدام کلمه وقتی برعکس خوانده می شود یکسان است؟',
+        options: ['سطح', 'خورشید', 'ماه', 'ستاره'],
+        correctAnswer: 0
+        },
+        {
+        id: 'int-17',
+        question: 'اگر دو ساعت پیش بعد از ساعت یک بود، ساعت چند است؟',
+        options: ['2', '3', '4', '1'],
+        correctAnswer: 1
+        },
+        {
+        id: 'int-18',
+        question: 'چه چیزی پر از سوراخ است اما هنوز آب را نگه می دارد؟',
+        options: ['یک بطری', 'یک اسفنج', 'یک فنجان', 'یک کاسه'],
+        correctAnswer: 1
+        },
+        {
+        id: 'int-19',
+        question: 'چه چیزی همیشه در حال آمدن است اما هرگز نمی رسد؟',
+        options: ['دیروز', 'امروز', 'فردا', 'هیچکدام'],
+        correctAnswer: 2
+        },
+        {
+        id: 'int-20',
+        question: 'چه چیزی را می توان شکست، حتی اگر هرگز آن را بر ندارید یا لمس نکنید؟',
+        options: ['یک پنجره', 'یک قول', 'یک بشقاب', 'یک تخم مرغ'],
+        correctAnswer: 1
+        }
     ]
   },
   {
@@ -136,7 +196,67 @@ export const quizCategories: Category[] = [
         question: 'کدام کتاب اثر حافظ شیرازی است؟',
         options: ['شاهنامه', 'دیوان حافظ', 'گلستان', 'بوستان'],
         correctAnswer: 1
-      }
+      },
+      {
+        id: 'gen-11',
+        question: 'چه کسی نمایشنامه «رومئو و ژولیت» را نوشته است؟',
+        options: ['چارلز دیکنز', 'ویلیام شکسپیر', 'مارک تواین', 'جین آستن'],
+        correctAnswer: 1
+        },
+        {
+        id: 'gen-12',
+        question: 'نماد شیمیایی آب چیست؟',
+        options: ['O2', 'CO2', 'H2O', 'NaCl'],
+        correctAnswer: 2
+        },
+        {
+        id: 'gen-13',
+        question: 'کدام کشور به عنوان سرزمین طلوع خورشید شناخته می شود؟',
+        options: ['چین', 'ژاپن', 'تایلند', 'هند'],
+        correctAnswer: 1
+        },
+        {
+        id: 'gen-14',
+        question: 'پایتخت استرالیا کدام شهر است؟',
+        options: ['سیدنی', 'ملبورن', 'کانبرا', 'پرت'],
+        correctAnswer: 2
+        },
+        {
+        id: 'gen-15',
+        question: 'بزرگترین صحرای جهان کدام است؟',
+        options: ['صحرای گبی', 'صحرای عربستان', 'صحرای کالاهاری', 'صحرای قطب جنوب'],
+        correctAnswer: 3
+        },
+        {
+        id: 'gen-16',
+        question: 'چه کسی نظریه نسبیت را توسعه داد؟',
+        options: ['اسحاق نیوتن', 'آلبرت انیشتین', 'گالیلئو گالیله', 'نیکولا تسلا'],
+        correctAnswer: 1
+        },
+        {
+        id: 'gen-17',
+        question: 'کدام قاره بیشترین تعداد کشور را دارد؟',
+        options: ['آسیا', 'آفریقا', 'اروپا', 'آمریکای جنوبی'],
+        correctAnswer: 1
+        },
+        {
+        id: 'gen-18',
+        question: 'چه کسی «مونالیزا» را نقاشی کرد؟',
+        options: ['وینسنت ون گوگ', 'پابلو پیکاسو', 'لئوناردو داوینچی', 'کلود مونه'],
+        correctAnswer: 2
+        },
+        {
+        id: 'gen-19',
+        question: 'کدام یک طولانی ترین رود جهان است؟',
+        options: ['رود آمازون', 'رود نیل', 'رود یانگ تسه', 'رود می سی سی پی'],
+        correctAnswer: 1
+        },
+        {
+        id: 'gen-20',
+        question: 'کدام کشور به شکل چکمه است؟',
+        options: ['اسپانیا', 'یونان', 'ایتالیا', 'فرانسه'],
+        correctAnswer: 2
+        }
     ]
   },
   {
@@ -147,64 +267,124 @@ export const quizCategories: Category[] = [
     questions: [
       {
         id: 'eng-1',
-        question: 'کدام کلمه معنی "خوشحال" را می‌دهد؟',
-        options: ['Sad', 'Happy', 'Angry', 'Tired'],
+        question: 'What is the meaning of "Happy"?',
+        options: ['غمگین', 'خوشحال', 'عصبانی', 'خسته'],
         correctAnswer: 1
       },
       {
         id: 'eng-2',
-        question: 'جمع کلمه "Child" چیست؟',
+        question: 'What is the plural of "Child"?',
         options: ['Childs', 'Children', 'Childes', 'Child'],
         correctAnswer: 1
       },
       {
         id: 'eng-3',
-        question: 'کدام جمله گرامری درست است؟',
+        question: 'Which sentence is grammatically correct?',
         options: ['I am go to school', 'I go to school', 'I goes to school', 'I going to school'],
         correctAnswer: 1
       },
       {
         id: 'eng-4',
-        question: 'معنی کلمه "Beautiful" چیست؟',
+        question: 'What is the meaning of "Beautiful"?',
         options: ['زشت', 'زیبا', 'بزرگ', 'کوچک'],
         correctAnswer: 1
       },
       {
         id: 'eng-5',
-        question: 'کدام کلمه با "Cat" قافیه می‌سازد؟',
+        question: 'Which word rhymes with "Cat"?',
         options: ['Dog', 'Hat', 'Bird', 'Fish'],
         correctAnswer: 1
       },
       {
         id: 'eng-6',
-        question: 'گذشته ساده فعل "Go" چیست؟',
+        question: 'What is the past simple of the verb "Go"?',
         options: ['Goed', 'Gone', 'Went', 'Going'],
         correctAnswer: 2
       },
       {
         id: 'eng-7',
-        question: 'کدام کلمه یک صفت است؟',
+        question: 'Which word is an adjective?',
         options: ['Run', 'Quick', 'Book', 'Water'],
         correctAnswer: 1
       },
       {
         id: 'eng-8',
-        question: 'معنی "Good morning" چیست؟',
+        question: 'What does "Good morning" mean?',
         options: ['شب بخیر', 'صبح بخیر', 'ظهر بخیر', 'عصر بخیر'],
         correctAnswer: 1
       },
       {
         id: 'eng-9',
-        question: 'کدام حرف اضافه در جمله "I live ___ Tehran" استفاده می‌شود؟',
+        question: 'Which preposition is used in the sentence "I live ___ Tehran"?',
         options: ['at', 'in', 'on', 'by'],
         correctAnswer: 1
       },
       {
         id: 'eng-10',
-        question: 'جمع کلمه "Mouse" چیست؟',
+        question: 'What is the plural of "Mouse"?',
         options: ['Mouses', 'Mice', 'Mouse', 'Mousees'],
         correctAnswer: 1
-      }
+      },
+      {
+        id: 'eng-11',
+        question: 'What is the opposite of "Hot"?',
+        options: ['Cold', 'Warm', 'Cool', 'Icy'],
+        correctAnswer: 0
+        },
+        {
+        id: 'eng-12',
+        question: 'What is the plural of "Wolf"?',
+        options: ['Wolfs', 'Wolfes', 'Wolves', 'Wolf'],
+        correctAnswer: 2
+        },
+        {
+        id: 'eng-13',
+        question: 'Which of these is a synonym for "Start"?',
+        options: ['End', 'Stop', 'Begin', 'Conclude'],
+        correctAnswer: 2
+        },
+        {
+        id: 'eng-14',
+        question: 'What is the third form of the verb "eat"?',
+        options: ['eat', 'ate', 'eaten', 'eating'],
+        correctAnswer: 2
+        },
+        {
+        id: 'eng-15',
+        question: 'Which sentence is correct?',
+        options: ["She don't like coffee", "She doesn't like coffee", "She no like coffee", "She not like coffee"],
+        correctAnswer: 1
+        },
+        {
+        id: 'eng-16',
+        question: 'What is the meaning of "Fast"?',
+        options: ['Slow', 'Quick', 'Quiet', 'Loud'],
+        correctAnswer: 1
+        },
+        {
+        id: 'eng-17',
+        question: 'What is the past tense of "drink"?',
+        options: ['drank', 'drunk', 'drinked', 'drinking'],
+        correctAnswer: 0
+        },
+        {
+        id: 'eng-18',
+        question: 'What is the opposite of "cheap"?',
+        options: ['inexpensive', 'expensive', 'free', 'costly'],
+        correctAnswer: 1
+        },
+        {
+        id: 'eng-19',
+        question: 'Which of the following is a pronoun?',
+        options: ['run', 'happy', 'she', 'beautiful'],
+        correctAnswer: 2
+        },
+        {
+        id: 'eng-20',
+        question: 'What is the meaning of "under"?',
+        options: ['over', 'in', 'below', 'next to'],
+        correctAnswer: 2
+        }
     ]
   },
   {
@@ -272,7 +452,67 @@ export const quizCategories: Category[] = [
         question: 'رضا شاه پهلوی در چه سالی به قدرت رسید؟',
         options: ['1304', '1305', '1306', '1307'],
         correctAnswer: 0
-      }
+      },
+      {
+        id: 'his-11',
+        question: 'اولین رئیس جمهور ایالات متحده چه کسی بود؟',
+        options: ['آبراهام لینکلن', 'توماس جفرسون', 'جورج واشنگتن', 'جان آدامز'],
+        correctAnswer: 2
+        },
+        {
+        id: 'his-12',
+        question: 'کشتی تایتانیک در چه سالی غرق شد؟',
+        options: ['1905', '1912', '1918', '1923'],
+        correctAnswer: 1
+        },
+        {
+        id: 'his-13',
+        question: 'کدام تمدن باستانی اهرام را ساخته است؟',
+        options: ['یونانی', 'رومی', 'مصری', 'بین النهرین'],
+        correctAnswer: 2
+        },
+        {
+        id: 'his-14',
+        question: 'رنسانس در کدام دوره تاریخی آغاز شد؟',
+        options: ['قرون وسطی', 'دوران باستان', 'دوران مدرن', 'دوران معاصر'],
+        correctAnswer: 0
+        },
+        {
+        id: 'his-15',
+        question: 'چه کسی اولین بار به دور دنیا قایقرانی کرد؟',
+        options: ['کریستف کلمب', 'فردیناند ماژلان', 'جیمز کوک', 'واسکو دا گاما'],
+        correctAnswer: 1
+        },
+        {
+        id: 'his-16',
+        question: 'امپراتوری روم در کدام سال سقوط کرد؟',
+        options: ['476 میلادی', '1453 میلادی', '330 میلادی', '1066 میلادی'],
+        correctAnswer: 0
+        },
+        {
+        id: 'his-17',
+        question: 'انقلاب فرانسه در کدام سال آغاز شد؟',
+        options: ['1789', '1776', '1804', '1815'],
+        correctAnswer: 0
+        },
+        {
+        id: 'his-18',
+        question: 'چه کسی دیوار بزرگ چین را ساخت؟',
+        options: ['چنگیز خان', 'کنفوسیوس', 'چین شی هوانگ', 'کوبلای خان'],
+        correctAnswer: 2
+        },
+        {
+        id: 'his-19',
+        question: 'کدام جنگ بین شمال و جنوب ایالات متحده بود؟',
+        options: ['جنگ انقلابی', 'جنگ داخلی', 'جنگ جهانی اول', 'جنگ ویتنام'],
+        correctAnswer: 1
+        },
+        {
+        id: 'his-20',
+        question: 'مارتین لوتر کینگ جونیور برای چه چیزی شهرت داشت؟',
+        options: ['اختراع لامپ', 'نوشتن «رویایی دارم»', 'رهبری جنبش حقوق مدنی', 'کشف پنی سیلین'],
+        correctAnswer: 2
+        }
     ]
   },
   {
@@ -340,7 +580,67 @@ export const quizCategories: Category[] = [
         question: 'بزرگترین استخوان بدن انسان کدام است؟',
         options: ['استخوان ران', 'استخوان بازو', 'ستون فقرات', 'استخوان سینه'],
         correctAnswer: 0
-      }
+      },
+      {
+        id: 'sci-11',
+        question: 'نیروگاه سلول چیست؟',
+        options: ['هسته', 'میتوکندری', 'ریبوزوم', 'سیتوپلاسم'],
+        correctAnswer: 1
+        },
+        {
+        id: 'sci-12',
+        question: 'بزرگترین سیاره منظومه شمسی ما کدام است؟',
+        options: ['زمین', 'مریخ', 'مشتری', 'زحل'],
+        correctAnswer: 2
+        },
+        {
+        id: 'sci-13',
+        question: 'چه نیرویی اجسام را به سمت مرکز زمین می کشد؟',
+        options: ['اصطکاک', 'مغناطیس', 'گرانش', 'کشش'],
+        correctAnswer: 2
+        },
+        {
+        id: 'sci-14',
+        question: 'دمای جوش آب در سطح دریا چقدر است؟',
+        options: ['90 درجه سانتیگراد', '100 درجه سانتیگراد', '110 درجه سانتیگراد', '120 درجه سانتیگراد'],
+        correctAnswer: 1
+        },
+        {
+        id: 'sci-15',
+        question: 'جدول تناوبی عناصر را چه کسی ساخته است؟',
+        options: ['ماری کوری', 'دمیتری مندلیف', 'آلبرت انیشتین', 'اسحاق نیوتن'],
+        correctAnswer: 1
+        },
+        {
+        id: 'sci-16',
+        question: 'چه چیزی باعث می شود گیاهان سبز شوند؟',
+        options: ['کلروفیل', 'کلروپلاست', 'سیتوپلاسم', 'فوتون'],
+        correctAnswer: 0
+        },
+        {
+        id: 'sci-17',
+        question: 'چند استخوان در بدن انسان بالغ وجود دارد؟',
+        options: ['206', '212', '220', '300'],
+        correctAnswer: 0
+        },
+        {
+        id: 'sci-18',
+        question: 'کدام یک از اینها یک منبع انرژی تجدیدپذیر نیست؟',
+        options: ['خورشیدی', 'باد', 'زغال سنگ', 'آب'],
+        correctAnswer: 2
+        },
+        {
+        id: 'sci-19',
+        question: 'واحد اصلی حیات چیست؟',
+        options: ['اتم', 'مولکول', 'سلول', 'ارگان'],
+        correctAnswer: 2
+        },
+        {
+        id: 'sci-20',
+        question: 'کدام سیاره به دلیل حلقه هایش شناخته شده است؟',
+        options: ['مریخ', 'مشتری', 'زحل', 'اورانوس'],
+        correctAnswer: 2
+        }
     ]
   },
   {
@@ -408,7 +708,67 @@ export const quizCategories: Category[] = [
         question: 'کدام شاعر در قونیه (ترکیه) مدفون است؟',
         options: ['حافظ', 'سعدی', 'فردوسی', 'مولوی'],
         correctAnswer: 3
-      }
+      },
+      {
+        id: 'lit-11',
+        question: 'نویسنده «1984» کیست؟',
+        options: ['جورج اورول', 'آلدوس هاکسلی', 'ری بردبری', 'اف. اسکات فیتزجرالد'],
+        correctAnswer: 0
+        },
+        {
+        id: 'lit-12',
+        question: 'کدام یک از اینها اثر معروفی از مولانا است؟',
+        options: ['دیوان شمس', 'گلستان', 'شاهنامه', 'رباعیات'],
+        correctAnswer: 0
+        },
+        {
+        id: 'lit-13',
+        question: 'موضوع اصلی «گتسبی بزرگ» چیست؟',
+        options: ['رویای آمریکایی', 'جنگ و صلح', 'عشق و از دست دادن', 'طبیعت و بشریت'],
+        correctAnswer: 0
+        },
+        {
+        id: 'lit-14',
+        question: 'چه کسی رمان «غرور و تعصب» را نوشته است؟',
+        options: ['خواهران برونته', 'جین آستن', 'جورج الیوت', 'ویرجینیا وولف'],
+        correctAnswer: 1
+        },
+        {
+        id: 'lit-15',
+        question: 'شخصیت اصلی کتاب «کشتن مرغ مقلد» کیست؟',
+        options: ['آتیکوس فینچ', 'اسکات فینچ', 'بو رادلی', 'تام رابینسون'],
+        correctAnswer: 1
+        },
+        {
+        id: 'lit-16',
+        question: 'در «هملت»، هملت شاهزاده کدام کشور است؟',
+        options: ['سوئد', 'دانمارک', 'نروژ', 'انگلیس'],
+        correctAnswer: 1
+        },
+        {
+        id: 'lit-17',
+        question: 'چه کسی «جنگ و صلح» را نوشت؟',
+        options: ['فئودور داستایوفسکی', 'لئو تولستوی', 'آنتوان چخوف', 'ایوان تورگنیف'],
+        correctAnswer: 1
+        },
+        {
+        id: 'lit-18',
+        question: 'کدام یک از موارد زیر یک ژانر ادبی نیست؟',
+        options: ['عاشقانه', 'علمی تخیلی', 'نقاشی', 'رازآلود'],
+        correctAnswer: 2
+        },
+        {
+        id: 'lit-19',
+        question: 'چه کسی «پیرمرد و دریا» را نوشت؟',
+        options: ['ارنست همینگوی', 'ویلیام فاکنر', 'جان اشتاین بک', 'اف. اسکات فیتزجرالد'],
+        correctAnswer: 0
+        },
+        {
+        id: 'lit-20',
+        question: 'کدام کتاب با این جمله آغاز می شود: «خوشبختی خانواده ها همه مثل هم است، اما هر خانواده بدبختی به روش خاص خود بدبخت است»؟',
+        options: ['جنایت و مکافات', 'موبی دیک', 'آنا کارنینا', 'برادران کارامازوف'],
+        correctAnswer: 2
+        }
     ]
   }
 ];

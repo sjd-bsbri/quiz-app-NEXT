@@ -1,6 +1,6 @@
 'use client';
 
-import { QuizResult as QuizResultType } from '../types/quiz';
+import { QuizResult as QuizResultType, Question } from '../types/quiz';
 import { formatTimeSpent, getScoreColor, getScoreMessage } from '../utils/helpers';
 import { Rocket, CheckCircle, XCircle } from 'lucide-react'; // ایمپورت آیکون‌ها
 
@@ -12,6 +12,12 @@ interface QuizResultProps {
 
 export default function QuizResult({ result, onRestart }: QuizResultProps) {
   const scorePercentage = (result.score / 100) * 360; // For circular progress
+
+  // پیدا کردن سوالاتی که اشتباه پاسخ داده شده‌اند
+  const incorrectQuestions = result.questions.map((question, index) => ({
+    ...question,
+    userAnswer: result.answers[index]
+  })).filter(q => q.userAnswer !== null && q.userAnswer !== q.correctAnswer);
 
   return (
     <div className="w-full max-w-2xl mx-auto animate-slide-up">
@@ -132,9 +138,36 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
           </div>
         </div>
       </div>
+      
+      {/* Incorrect Answers Review */}
+      {incorrectQuestions.length > 0 && (
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold text-white text-center mb-6 font-vazirmatn">مرور پاسخ‌های اشتباه</h2>
+          <div className="space-y-6">
+            {incorrectQuestions.map((question) => (
+              <div key={question.id} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-600/30">
+                <p className="text-lg leading-relaxed text-gray-100 font-vazirmatn mb-4">
+                  {question.question}
+                </p>
+                <div className="space-y-2">
+                  <p className="text-red-400 font-vazirmatn">
+                    <span className="font-bold">پاسخ شما: </span>
+                    {question.options[question.userAnswer!]}
+                  </p>
+                  <p className="text-green-400 font-vazirmatn">
+                    <span className="font-bold">پاسخ صحیح: </span>
+                    {question.options[question.correctAnswer]}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
 
       {/* Completion Date */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 mt-8">
         <div className="text-sm text-gray-400 font-vazirmatn">
           تاریخ تکمیل: {result.completedAt.toLocaleDateString('fa-IR')} - {result.completedAt.toLocaleTimeString('fa-IR')}
         </div>
@@ -145,10 +178,10 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
         <button
           onClick={onRestart}
           className={`
-  px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 
-  text-white font-bold rounded-xl font-vazirmatn
-  transform transition-all duration-300 hover:scale-105 hover:shadow-lg
-  border border-white/10 backdrop-blur-sm  flex items-center gap-2 mx-auto`}
+            px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 
+            text-white font-bold rounded-xl font-vazirmatn
+            transform transition-all duration-300 hover:scale-105 hover:shadow-lg
+            border border-white/10 backdrop-blur-sm flex items-center gap-2 mx-auto`}
         >
           آزمون جدید <Rocket color='red' size={20} />
         </button>
@@ -160,7 +193,7 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
             stroke-dasharray: 0 283;
           }
           to {
-            stroke-dasharray: ${scorePercentage * 0.785} 283;
+            stroke-dasharray: ${scorePercentage * 2.83} 283;
           }
         }
       `}</style>

@@ -27,6 +27,8 @@ export const QuizResultSchema = z.object({
   score: z.number(),
   timeSpent: z.number(),
   completedAt: z.date(),
+  questions: z.array(QuestionSchema),
+  answers: z.array(z.nullable(z.number())),
 });
 
 export type Question = z.infer<typeof QuestionSchema>;

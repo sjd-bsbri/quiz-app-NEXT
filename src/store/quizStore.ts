@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { QuizStore, Category, QuizResult } from '@/types/quiz';
+import { QuizStore, Category, QuizResult } from '../types/quiz';
 
 const QUIZ_TIME_LIMIT = 420; // 7 minutes in seconds
 
@@ -91,6 +91,8 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       score,
       timeSpent,
       completedAt: endTime,
+      questions: currentCategory.questions,
+      answers,
     };
 
     set({
