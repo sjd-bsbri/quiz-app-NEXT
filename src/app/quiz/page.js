@@ -5,9 +5,9 @@ import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
-import { quiz } from "../src/data";
-import { Answers, Buttons, Result } from "../src/components/quiz";
-import UserCard from "../src/components/card/UserCard";
+import { quiz } from "../../data";
+import { Answers, Buttons, Result } from "../../components/quiz";
+import UserCard from "../../components/card/UserCard";
 
 export default function Quiz() {
     const { data: session } = useSession({
