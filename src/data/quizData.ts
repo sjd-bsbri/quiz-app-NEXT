@@ -1,10 +1,12 @@
-import { Category } from '@/types/quiz';
+import { Category } from '../types/quiz';
+import { BrainCircuit, Globe, Languages, Landmark, FlaskConical, BookOpen } from 'lucide-react';
+
 
 export const quizCategories: Category[] = [
   {
     id: 'intelligence',
     name: 'هوش',
-    icon: '🧠',
+    icon: BrainCircuit,
     color: 'from-purple-500 to-pink-500',
     questions: [
       {
@@ -72,7 +74,7 @@ export const quizCategories: Category[] = [
   {
     id: 'general',
     name: 'اطلاعات عمومی',
-    icon: '🌍',
+    icon: Globe,
     color: 'from-blue-500 to-cyan-500',
     questions: [
       {
@@ -140,7 +142,7 @@ export const quizCategories: Category[] = [
   {
     id: 'english',
     name: 'زبان انگلیسی',
-    icon: '🇬🇧',
+    icon: Languages,
     color: 'from-green-500 to-teal-500',
     questions: [
       {
@@ -208,7 +210,7 @@ export const quizCategories: Category[] = [
   {
     id: 'history',
     name: 'تاریخ',
-    icon: '🏛️',
+    icon: Landmark,
     color: 'from-yellow-500 to-orange-500',
     questions: [
       {
@@ -276,7 +278,7 @@ export const quizCategories: Category[] = [
   {
     id: 'science',
     name: 'علوم',
-    icon: '🔬',
+    icon: FlaskConical,
     color: 'from-indigo-500 to-purple-500',
     questions: [
       {
@@ -344,7 +346,7 @@ export const quizCategories: Category[] = [
   {
     id: 'literature',
     name: 'ادبیات',
-    icon: '📚',
+    icon: BookOpen,
     color: 'from-red-500 to-pink-500',
     questions: [
       {

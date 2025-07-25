@@ -1,14 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { useQuizStore } from '@/store/quizStore';
-import { quizCategories } from '@/data/quizData';
-import { Category, QuizResult as QuizResultType } from '@/types/quiz';
-import CategoryCard from '@/components/CategoryCard';
-import QuestionCard from '@/components/QuestionCard';
-import ProgressBar from '@/components/ProgressBar';
-import Timer from '@/components/Timer';
-import QuizResult from '@/components/QuizResult';
+import { useQuizStore } from '../store/quizStore';
+import { quizCategories } from '../data/quizData';
+import { Category, QuizResult as QuizResultType } from '../types/quiz';
+import CategoryCard from '../components/CategoryCard';
+import QuestionCard from '../components/QuestionCard';
+import ProgressBar from '../components/ProgressBar';
+import Timer from '../components/Timer';
+import QuizResult from '../components/QuizResult';
+
 
 export default function Home() {
   const [quizResult, setQuizResult] = useState<QuizResultType | null>(null);
@@ -109,7 +110,7 @@ export default function Home() {
                   transform transition-all duration-300
                   border backdrop-blur-sm
                   ${selectedAnswer !== null
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white border-white/10 hover:scale-105 hover:shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-900 text-white border-white/10 hover:scale-105 hover:shadow-lg'
                     : 'bg-gray-700/50 text-gray-400 border-gray-600/30 cursor-not-allowed'
                   }
                 `}

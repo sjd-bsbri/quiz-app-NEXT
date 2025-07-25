@@ -1,7 +1,9 @@
 'use client';
 
-import { QuizResult as QuizResultType } from '@/types/quiz';
-import { formatTimeSpent, getScoreColor, getScoreMessage } from '@/utils/helpers';
+import { QuizResult as QuizResultType } from '../types/quiz';
+import { formatTimeSpent, getScoreColor, getScoreMessage } from '../utils/helpers';
+import { Rocket, CheckCircle, XCircle } from 'lucide-react'; // ایمپورت آیکون‌ها
+
 
 interface QuizResultProps {
   result: QuizResultType;
@@ -60,7 +62,7 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Score Text */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
@@ -85,7 +87,9 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
       {/* Statistics */}
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 text-center">
-          <div className="text-3xl mb-2">✅</div>
+          <div className="text-3xl mb-2 flex justify-center text-green-400">
+            <CheckCircle size={32} />
+          </div>
           <div className="text-2xl font-bold text-green-400 mb-1">
             {result.correctAnswers}
           </div>
@@ -95,7 +99,9 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
         </div>
 
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 text-center">
-          <div className="text-3xl mb-2">❌</div>
+          <div className="text-3xl mb-2 flex justify-center text-red-400">
+            <XCircle size={32} />
+          </div>
           <div className="text-2xl font-bold text-red-400 mb-1">
             {result.wrongAnswers}
           </div>
@@ -138,14 +144,13 @@ export default function QuizResult({ result, onRestart }: QuizResultProps) {
       <div className="text-center">
         <button
           onClick={onRestart}
-          className="
-            px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 
-            text-white font-bold rounded-xl font-vazirmatn
-            transform transition-all duration-300 hover:scale-105 hover:shadow-lg
-            border border-white/10 backdrop-blur-sm
-          "
+          className={`
+  px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 
+  text-white font-bold rounded-xl font-vazirmatn
+  transform transition-all duration-300 hover:scale-105 hover:shadow-lg
+  border border-white/10 backdrop-blur-sm  flex items-center gap-2 mx-auto`}
         >
-          آزمون جدید 🚀
+          آزمون جدید <Rocket color='red' size={20} />
         </button>
       </div>
 

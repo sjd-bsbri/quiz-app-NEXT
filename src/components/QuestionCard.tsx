@@ -1,7 +1,7 @@
 'use client';
 
-import { Question } from '@/types/quiz';
-import { useQuizStore } from '@/store/quizStore';
+import { Question } from '../types/quiz';
+import { useQuizStore } from '../store/quizStore';
 
 interface QuestionCardProps {
   question: Question;
@@ -85,14 +85,14 @@ export default function QuestionCard({ question, questionNumber, onAnswer }: Que
       </div>
 
       {/* Selection Indicator */}
-      {selectedAnswer !== null && (
+      {/* {selectedAnswer !== null && (
         <div className="mt-6 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-400 font-vazirmatn">
-            <span>✓</span>
+           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-400 font-vazirmatn">
+            <Check size={16} />
             <span>پاسخ انتخاب شد</span>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

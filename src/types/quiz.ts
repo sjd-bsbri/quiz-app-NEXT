@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import type { LucideIcon } from 'lucide-react'; // ایمپورت تایپ آیکون
+
 
 export const QuestionSchema = z.object({
   id: z.string(),
@@ -10,7 +12,8 @@ export const QuestionSchema = z.object({
 export const CategorySchema = z.object({
   id: z.string(),
   name: z.string(),
-  icon: z.string(),
+  // icon: z.string(),
+  icon: z.any(),
   color: z.string(),
   questions: z.array(QuestionSchema),
 });
@@ -27,7 +30,10 @@ export const QuizResultSchema = z.object({
 });
 
 export type Question = z.infer<typeof QuestionSchema>;
-export type Category = z.infer<typeof CategorySchema>;
+// export type Category = z.infer<typeof CategorySchema>;
+export interface Category extends Omit<z.infer<typeof CategorySchema>, 'icon'> {
+  icon: LucideIcon; // تایپ دقیق آیکون را اینجا تعریف می‌کنیم
+}
 export type QuizResult = z.infer<typeof QuizResultSchema>;
 
 export interface QuizState {

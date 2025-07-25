@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 
-import GithubImage from "@/src/assets/github-white.svg";
+import GithubImage from "/src/assets/github-white.svg";
 
 export default function LoginPage() {
     const router = useRouter();
