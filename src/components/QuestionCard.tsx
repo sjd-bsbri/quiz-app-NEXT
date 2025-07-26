@@ -14,22 +14,34 @@ export default function QuestionCard({ question, questionNumber, onAnswer }: Que
   const selectedAnswer = answers[currentQuestionIndex];
 
   const handleOptionClick = (optionIndex: number) => {
-    onAnswer(optionIndex);
+    if (selectedAnswer === null) {
+      onAnswer(optionIndex);
+    }
   };
 
   const getOptionStyle = (optionIndex: number) => {
     const isSelected = selectedAnswer === optionIndex;
+    const isCorrect = question.correctAnswer === optionIndex;
     const baseStyle = `
-      w-full p-4 text-right rounded-xl border-2 transition-all duration-300 cursor-pointer
-      font-vazirmatn transform hover:scale-[1.02] hover:shadow-lg
+      w-full p-4 text-right rounded-xl border-2 transition-all duration-300
+      font-vazirmatn transform
       backdrop-blur-sm
     `;
-    
-    if (isSelected) {
-      return `${baseStyle} bg-blue-500/20 border-blue-400 text-blue-100 shadow-lg shadow-blue-500/25`;
+
+    if (selectedAnswer !== null) {
+      if (isSelected) {
+        if (isCorrect) {
+          return `${baseStyle} bg-green-500/20 border-green-400 text-green-100 shadow-lg shadow-green-500/25 cursor-default`;
+        } else {
+          return `${baseStyle} bg-red-500/20 border-red-400 text-red-100 shadow-lg shadow-red-500/25 cursor-default`;
+        }
+      } else if (isCorrect) {
+        return `${baseStyle} bg-green-500/20 border-green-400 text-green-100 cursor-default`;
+      }
+      return `${baseStyle} bg-gray-800/40 border-gray-600/30 text-gray-400 cursor-default opacity-60`;
     }
     
-    return `${baseStyle} bg-gray-800/40 border-gray-600/30 text-gray-200 hover:bg-gray-700/50 hover:border-gray-500/50`;
+    return `${baseStyle} bg-gray-800/40 border-gray-600/30 text-gray-200 hover:bg-gray-700/50 hover:border-gray-500/50 cursor-pointer hover:scale-[1.02] hover:shadow-lg`;
   };
 
   const optionLabels = ['الف', 'ب', 'ج', 'د'];
@@ -47,7 +59,6 @@ export default function QuestionCard({ question, questionNumber, onAnswer }: Que
           </h2>
         </div>
         
-        {/* Question Text */}
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-600/30">
           <p className="text-lg leading-relaxed text-gray-100 font-vazirmatn">
             {question.question}
@@ -55,7 +66,6 @@ export default function QuestionCard({ question, questionNumber, onAnswer }: Que
         </div>
       </div>
 
-      {/* Options */}
       <div className="space-y-4">
         {question.options.map((option, index) => (
           <div
@@ -83,16 +93,6 @@ export default function QuestionCard({ question, questionNumber, onAnswer }: Que
           </div>
         ))}
       </div>
-
-      {/* Selection Indicator */}
-      {/* {selectedAnswer !== null && (
-        <div className="mt-6 text-center">
-           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-400 font-vazirmatn">
-            <Check size={16} />
-            <span>پاسخ انتخاب شد</span>
-          </div>
-        </div>
-      )} */}
     </div>
   );
 }
