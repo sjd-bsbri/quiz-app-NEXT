@@ -1,5 +1,5 @@
 import Frame from "../../../components/modal/Frame";
-import sajadImage from "@/src/assets/sajad-image.jpg";
+import sajadImage from "../../../assets/sajad-image.jpg";
 
 
 export default function PhotoPage() {
