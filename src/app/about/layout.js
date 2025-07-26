@@ -1,8 +1,7 @@
-export default function Layout({ children, modal }) {
+export default function Layout({ children }) {
     return (
         <div className="container mx-auto">
             {children}
-            {modal}
         </div>
     );
 }
