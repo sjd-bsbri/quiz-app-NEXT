@@ -1,4 +1,4 @@
-import Frame from "@/src/components/modal/Frame";
+import Frame from "../../../components/modal/Frame";
 import sajadImage from "@/src/assets/sajad-image.jpg";
 
 

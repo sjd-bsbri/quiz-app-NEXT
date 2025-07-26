@@ -8,7 +8,6 @@ import Link from "next/link";
 import { quiz } from "../../data";
 import { Answers, Buttons, Result } from "../../components/quiz";
 import UserCard from "../../components/card/UserCard";
-
 export default function Quiz() {
     const { data: session } = useSession({
         required: true,

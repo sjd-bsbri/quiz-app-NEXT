@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import { options } from "../api/auth/[...nextauth]/options";
-import sajadImage from "@/src/assets/sajad-image.jpg";
+import sajadImage from "../../assets/sajad-image.jpg";
 
 
 export default async function About() {
